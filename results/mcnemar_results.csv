@@ -1,0 +1,13 @@
+dataset,model_A,model_B,b,c,statistic,p_value,p_value_adjusted,significant,significant_holm
+UGRansome2024,RandomForest,DecisionTree,6,27,12.1212,0.000499,0.000998,True,True
+UGRansome2024,RandomForest,XGBoost,15,57,23.3472,1e-06,3e-06,True,True
+UGRansome2024,RandomForest,LogisticRegression,1329,58,1162.8695,0.0,0.0,True,True
+UGRansome2024,DecisionTree,XGBoost,20,41,6.5574,0.010445,0.010445,True,True
+UGRansome2024,DecisionTree,LogisticRegression,1338,46,1204.2493,0.0,0.0,True,True
+UGRansome2024,XGBoost,LogisticRegression,1333,20,1272.2424,0.0,0.0,True,True
+CICIoT2023,RandomForest,DecisionTree,97,52,12.9933,0.000313,0.000626,True,True
+CICIoT2023,RandomForest,XGBoost,149,69,28.6284,0.0,0.0,True,True
+CICIoT2023,RandomForest,LogisticRegression,767,52,622.4615,0.0,0.0,True,True
+CICIoT2023,DecisionTree,XGBoost,145,110,4.5333,0.033241,0.033241,True,True
+CICIoT2023,DecisionTree,LogisticRegression,770,100,514.4379,0.0,0.0,True,True
+CICIoT2023,XGBoost,LogisticRegression,681,46,552.8968,0.0,0.0,True,True

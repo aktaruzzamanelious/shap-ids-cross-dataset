@@ -1,0 +1,14 @@
+{
+  "UGRansome2024": {
+    "rule1": "Netflow_Bytes > 5976.0000 (95th pct of benign training flows)",
+    "rule2": "Protocol_ICMP == 1 (ICMP rate 41.3% attack vs 24.2% benign)",
+    "rule3": "Clusters_2 == 1 (Cluster 2 rate 64.3% attack vs 7.3% benign)",
+    "logic": "OR"
+  },
+  "CICIoT2023": {
+    "rule1": "IAT > 166525347.4223 (95th pct of benign training flows)",
+    "rule2": "flow_duration < 0.70243863 (5th pct of benign training flows)",
+    "rule3": "Rate > 838.4722 (95th pct of benign training flows)",
+    "logic": "OR"
+  }
+}

@@ -1,0 +1,2 @@
+tier,n_features,f1_macro,f1_attack,f1_benign,accuracy,auc_roc,mcc,tp,fp,fn,tn
+A_raw_flow_only,19,0.967663,0.950012,0.985314,0.977298,0.986362,0.935339,3877,188,220,13687

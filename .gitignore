@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw and processed datasets (downloaded separately; see data/README.md)
+data/raw/
+data/processed/
+*.zip
+*.tar.gz
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+*.env
+*.key
+secrets/
+kaggle.json
+
+# NOTE: results/ (canonical CSVs, JSON, 8 .joblib models, the SHAP interaction
+# .npy) and figures/ ARE part of this reproducibility package and are tracked
+# intentionally. Do not add blanket *.npy / *.joblib ignores here.

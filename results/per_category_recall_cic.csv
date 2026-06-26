@@ -1,0 +1,29 @@
+model,category,total_samples,tp,fn,recall
+RandomForest,DDoS,29295,29295,0,1.0
+RandomForest,DoS,6795,6795,0,1.0
+RandomForest,Reconnaissance,295,268,27,0.908475
+RandomForest,Brute Force,11,10,1,0.909091
+RandomForest,Spoofing,419,384,35,0.916468
+RandomForest,Mirai,2217,2217,0,1.0
+RandomForest,Web Attacks,17,16,1,0.941176
+DecisionTree,DDoS,29295,29295,0,1.0
+DecisionTree,DoS,6795,6795,0,1.0
+DecisionTree,Reconnaissance,295,266,29,0.901695
+DecisionTree,Brute Force,11,9,2,0.818182
+DecisionTree,Spoofing,419,380,39,0.906921
+DecisionTree,Mirai,2217,2217,0,1.0
+DecisionTree,Web Attacks,17,12,5,0.705882
+XGBoost,DDoS,29295,29295,0,1.0
+XGBoost,DoS,6795,6795,0,1.0
+XGBoost,Reconnaissance,295,212,83,0.718644
+XGBoost,Brute Force,11,5,6,0.454545
+XGBoost,Spoofing,419,303,116,0.72315
+XGBoost,Mirai,2217,2217,0,1.0
+XGBoost,Web Attacks,17,9,8,0.529412
+LogisticRegression,DDoS,29295,29135,160,0.994538
+LogisticRegression,DoS,6795,6723,72,0.989404
+LogisticRegression,Reconnaissance,295,112,183,0.379661
+LogisticRegression,Brute Force,11,3,8,0.272727
+LogisticRegression,Spoofing,419,142,277,0.338902
+LogisticRegression,Mirai,2217,2165,52,0.976545
+LogisticRegression,Web Attacks,17,3,14,0.176471

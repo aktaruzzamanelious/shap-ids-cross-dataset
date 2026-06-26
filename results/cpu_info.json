@@ -1,0 +1,5 @@
+{
+  "model_name": "AMD EPYC 9354P 32-Core Processor",
+  "cpu_mhz": "3249.984",
+  "physical_cores": 2
+}
