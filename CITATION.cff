@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the article and this repository."
+title: "SHAP-Based Explainable Intrusion Detection: A Two-Dataset Comparison of Lightweight Classifiers for IoT and Ransomware Traffic"
+abstract: "Reproducibility package: code, notebooks, canonical result files, trained models, and publication figures for a two-dataset comparison of lightweight intrusion-detection classifiers with SHAP-based explainability."
+type: software
+authors:
+  - family-names: "Elious"
+    given-names: "Aktaruzzaman"
+    orcid: "https://orcid.org/0009-0009-6143-5183"
+    affiliation: "University of the West of Scotland"
+  - family-names: "Thankappan"
+    given-names: "Manesh"
+    affiliation: "University of the West of Scotland"
+  - family-names: "Javaheri"
+    given-names: "Danial"
+    affiliation: "University of the West of Scotland"
+repository-code: "https://github.com/aktaruzzamanelious/shap-ids-cross-dataset"
+license: MIT
+version: "1.0.0"
+date-released: "2026-06-27"
+keywords:
+  - intrusion-detection
+  - explainable-ai
+  - shap
+  - reproducibility
+  - network-security
+# After archiving the v1.0.0 release on Zenodo, add the concept DOI here:
+# doi: "10.5281/zenodo.XXXXXXX"

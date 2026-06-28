@@ -10,7 +10,7 @@ the notebooks and are also excluded from version control.
 ### UGRansome2024
 
 - Source: Kaggle
-- Authors: Azugo, Venter, Nkongolo (2024)
+- Authors: Azugo et al. (2024)
 - URL: https://www.kaggle.com/datasets/azugo/ugransome2024
 - Access: requires a free Kaggle account
 - Version downloaded: 2024-08-27

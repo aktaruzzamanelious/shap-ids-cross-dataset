@@ -1,14 +1,16 @@
-# SHAP-Based Explainable Intrusion Detection: A Cross-Dataset Study
+# SHAP-Based Explainable Intrusion Detection: A Two-Dataset Comparison of Lightweight Classifiers for IoT and Ransomware Traffic
 
-A cross-dataset comparison of lightweight classifiers for IoT and ransomware
+A two-dataset comparison of lightweight classifiers for IoT and ransomware
 traffic detection, with SHAP-based explainability and an SOC-workload
 translation of false-alert rates.
 
-## Author
+## Authors
 
-Aktaruzzaman Elious
-University of the West of Scotland
-ORCID: 0009-0009-6143-5183
+- Aktaruzzaman Elious — University of the West of Scotland — ORCID [0009-0009-6143-5183](https://orcid.org/0009-0009-6143-5183)
+- Manesh Thankappan — University of the West of Scotland
+- Danial Javaheri — University of the West of Scotland
+
+Repository prepared and maintained by A. Elious.
 
 ## Paper
 
@@ -16,7 +18,7 @@ Manuscript in preparation. Target journal: MDPI *Sensors*.
 
 ## Datasets
 
-- **UGRansome2024** (Azugo, Venter, Nkongolo 2024) — ransomware network traffic
+- **UGRansome2024** (Azugo et al., 2024) — ransomware network traffic
 - **CICIoT2023** (Neto et al. 2023) — IoT attack traffic
 
 Both are publicly available. Raw data is **not** shipped here; see
@@ -28,11 +30,31 @@ Both are publicly available. Raw data is **not** shipped here; see
 2. Create a Python 3.12 virtual environment.
 3. `pip install -r requirements.txt`
 4. Download the datasets per [`data/README.md`](data/README.md).
-5. Run the notebooks in numerical order, `01` → `12`.
+5. Launch Jupyter **from the repository root** and run the notebooks in
+   numerical order, `01` → `12`. Each notebook resolves the repository root
+   automatically, so paths work whether it is launched from the root or from
+   the `notebooks/` folder.
 
-All results CSVs, the 8 trained models, the SHAP interaction array, and the 18
-publication figures are included so the manuscript numbers can be inspected and
+All result CSVs, the 8 trained models, the SHAP interaction array, and the 18
+publication figures are included, so the manuscript numbers can be inspected and
 verified without re-running the full pipeline.
+
+**Reproducibility.** All stochastic steps use a fixed seed of **42**: the 80/20
+UGRansome2024 split, model training, the five-seed Random Forest stability check,
+bootstrap resampling, and SHAP background sampling. CICIoT2023 uses the dataset
+authors' official train/test split. The deterministic post-processing steps
+(McNemar and Holm tests, the SOC-workload translation, per-category recall, and
+timing) require no seed.
+
+**Verifying the numbers.** A self-contained checker is included. From the
+repository root, run:
+
+```
+python3 verify_canonical_artifacts.py
+```
+
+It confirms each of the 13 canonical result CSVs by SHA-256 checksum and by the
+specific values reported in the manuscript tables (exit code 0 means all pass).
 
 ## Notebook → canonical artifact map
 
@@ -115,6 +137,17 @@ Run from the repository root:
 python3 make_corrected_figs.py
 ```
 
+## Limitations
+
+- SHAP interaction values were computed for the UGRansome2024 / XGBoost model
+  only (`results/top_interactions_ugr_xgb.csv`, `results/shap_interaction_ugr_xgb.npy`).
+  The CICIoT2023 interaction computation was not performed owing to memory
+  constraints.
+- No deep-learning or other heavyweight baseline was run; the comparison is among
+  the four lightweight classifiers and the rule-based baselines.
+- This is a two-dataset comparison; it does not test cross-dataset transfer
+  (training on one dataset and evaluating on the other).
+
 ## Repository structure
 
 ```
@@ -123,12 +156,13 @@ results/     13 canonical result CSVs + supporting JSON, SHAP interaction array,
              baselines/ (metrics + rule thresholds), and models/ (8 trained .joblib)
 figures/     18 publication figures at 600 DPI, each with a PNG and a PDF (36 files)
 data/        Download instructions + helper script (no raw data shipped)
-audit/       SHAP interaction note
-make_corrected_figs.py   regenerates Figure 17 (efficiency.*) and Figure 18
-                         (soc_workload.*) from the canonical results/ CSVs
-split_canonical_csvs.py  splits the two combined CSVs the notebooks write
-                         (ablation_ugr.csv, bootstrap_ci.csv) into the four
-                         canonical per-tier / per-dataset files
+verify_canonical_artifacts.py  checks the 13 canonical CSVs by checksum + value
+make_corrected_figs.py         regenerates Figure 17 (efficiency.*) and Figure 18
+                               (soc_workload.*) from the canonical results/ CSVs
+split_canonical_csvs.py        splits the two combined CSVs the notebooks write
+                               (ablation_ugr.csv, bootstrap_ci.csv) into the four
+                               canonical per-tier / per-dataset files
+CITATION.cff                   citation metadata for GitHub's cite feature
 ```
 
 The pipeline notebooks are self-contained and import no local helper module.
@@ -139,5 +173,18 @@ MIT — see [`LICENSE`](LICENSE).
 
 ## Citation
 
-If you use this work, please cite the published article (citation to be added
-after publication).
+If you use this work, please cite the article (once published) and this
+repository. A `CITATION.cff` is provided for GitHub's "Cite this repository"
+button. Pending publication and Zenodo archival:
+
+```bibtex
+@misc{elious_shap_ids_2026,
+  author       = {Elious, Aktaruzzaman and Thankappan, Manesh and Javaheri, Danial},
+  title        = {{SHAP-Based Explainable Intrusion Detection: A Two-Dataset
+                   Comparison of Lightweight Classifiers for IoT and Ransomware
+                   Traffic}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/aktaruzzamanelious/shap-ids-cross-dataset}},
+  note         = {Zenodo DOI to be added on release}
+}
+```
