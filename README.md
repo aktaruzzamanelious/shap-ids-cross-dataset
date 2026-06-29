@@ -6,9 +6,9 @@ translation of false-alert rates.
 
 ## Authors
 
-- Aktaruzzaman Elious — University of the West of Scotland — ORCID [0009-0009-6143-5183](https://orcid.org/0009-0009-6143-5183)
-- Manesh Thankappan — University of the West of Scotland
-- Danial Javaheri — University of the West of Scotland
+- Aktaruzzaman Elious - University of the West of Scotland - ORCID [0009-0009-6143-5183](https://orcid.org/0009-0009-6143-5183)
+- Manesh Thankappan - University of the West of Scotland
+- Danial Javaheri - University of the West of Scotland
 
 Repository prepared and maintained by A. Elious.
 
@@ -18,8 +18,8 @@ Manuscript in preparation. Target journal: MDPI *Sensors*.
 
 ## Datasets
 
-- **UGRansome2024** (Azugo et al., 2024) — ransomware network traffic
-- **CICIoT2023** (Neto et al. 2023) — IoT attack traffic
+- **UGRansome2024** (Azugo et al., 2024) - ransomware network traffic
+- **CICIoT2023** (Neto et al. 2023) - IoT attack traffic
 
 Both are publicly available. Raw data is **not** shipped here; see
 [`data/README.md`](data/README.md) for URLs, access dates, and a download helper.
@@ -84,7 +84,7 @@ single combined file that the notebook writes.
 `08_ablation.ipynb` writes `results/ablation_ugr.csv` (one file holding the Tier A
 row plus the four Tier B rows), and `09_bootstrap_ci.ipynb` writes
 `results/bootstrap_ci.csv` (one file holding both datasets). The shipped
-canonical files are these split by row — `ablation_ugransome_tier_a.csv` is the
+canonical files are these split by row - `ablation_ugransome_tier_a.csv` is the
 single `A_raw_flow_only` row, `ablation_ugransome_tier_b.csv` is the four
 `B1`–`B4` rows, and `metrics_with_ci_{ugr,cic}.csv` are the per-dataset subsets.
 All four carry the same columns as the combined file and are the
@@ -169,7 +169,7 @@ The pipeline notebooks are self-contained and import no local helper module.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT  see [`LICENSE`](LICENSE).
 
 ## Citation
 
