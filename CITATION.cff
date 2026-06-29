@@ -17,12 +17,11 @@ authors:
 repository-code: "https://github.com/aktaruzzamanelious/shap-ids-cross-dataset"
 license: MIT
 version: "1.0.0"
-date-released: "2026-06-27"
+date-released: "2026-06-29"
+doi: "10.5281/zenodo.21046395"
 keywords:
   - intrusion-detection
   - explainable-ai
   - shap
   - reproducibility
   - network-security
-# After archiving the v1.0.0 release on Zenodo, add the concept DOI here:
-# doi: "10.5281/zenodo.XXXXXXX"
