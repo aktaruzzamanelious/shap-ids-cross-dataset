@@ -1,4 +1,5 @@
 # SHAP-Based Explainable Intrusion Detection: A Two-Dataset Comparison of Lightweight Classifiers for IoT and Ransomware Traffic
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21046395.svg)](https://doi.org/10.5281/zenodo.21046395)
 
 A two-dataset comparison of lightweight classifiers for IoT and ransomware
 traffic detection, with SHAP-based explainability and an SOC-workload
